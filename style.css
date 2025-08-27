@@ -1,0 +1,359 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: #2e7d32;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 0 0 12px 12px;
+}
+
+.header h1 {
+  font-weight: 800;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-weight: 400;
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* Navigation */
+.navbar {
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  border-radius: 12px;
+}
+
+.navbar .nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+}
+
+.navbar .nav-menu li a {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-menu li a:hover,
+.navbar .nav-menu li a:focus {
+  background-color: #2e7d32;
+  color: #fff;
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  color: #fff;
+  padding: 70px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transition: background 0.5s ease;
+}
+
+.hero:hover {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.hero h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.1px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Main layout */
+.main-layout {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Blog Posts */
+.blog-posts {
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover img {
+  transform: scale(1.05);
+}
+
+.post-content {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-grow: 1;
+}
+
+.post-content h3 {
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.post-content p {
+  flex-grow: 1;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post-content a {
+  align-self: flex-start;
+  color: #56ab2f;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.post-content a:hover,
+.post-content a:focus {
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+  outline: none;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.widget {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  padding: 22px 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.widget:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.widget h4 {
+  margin-bottom: 14px;
+  color: #2e7d32;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 2px solid #56ab2f;
+  padding-bottom: 6px;
+}
+
+.widget ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.widget ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.widget ul li a:hover,
+.widget ul li a:focus {
+  color: #2e7d32;
+  outline: none;
+}
+
+.widget form {
+  display: flex;
+  gap: 12px;
+}
+
+.widget input[type="email"] {
+  flex-grow: 1;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.widget input[type="email"]:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+.widget button {
+  background-color: #2e7d32;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 10px 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.widget button:hover,
+.widget button:focus {
+  background-color: #56ab2f;
+  outline: none;
+}
+
+/* Footer */
+.footer {
+  background: #2e7d32;
+  color: #d3d3d3;
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 12px 12px 0 0;
+  user-select: none;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #a5d6a7;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .blog-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .widget {
+    min-width: 250px;
+    flex: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+.post-description {
+  overflow: hidden;
+  max-height: 60px; /* শুরুতে শুধুমাত্র 60px উঁচু অংশ দেখাবে */
+  transition: max-height 0.4s ease;
+}
+
+.post-description.expanded {
+  max-height: 500px; /* পুরো লেখা দেখানোর জন্য বড় করে দিবে */
+}
+
+
+
