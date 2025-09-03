@@ -263,26 +263,27 @@ form label {
     </div>
   </nav>
 
-  <!-- Contact Form Section -->
-  <main class="container" style="margin-top: 40px; max-width: 700px;">
-    <section class="widget">
-      <h2>📞 Get in Touch</h2>
-      <p>If you have any questions, feedback, or just want to say hi, fill out the form below and we’ll get back to you soon!</p>
+<main class="container" style="margin-top: 40px; max-width: 700px;">
+  <section class="widget">
+    <h2>📞 Get in Touch</h2>
+    <p>If you have any questions, feedback, or just want to say hi, fill out the form below and we’ll get back to you soon!</p>
 
-      <form id="contactForm">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" placeholder="Your Name" required />
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4176c97-2c91-41e0-bf99-070eb7b89d90">
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" placeholder="your@email.com" required />
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required />
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
 
   <!-- Footer -->
   <footer class="footer">
